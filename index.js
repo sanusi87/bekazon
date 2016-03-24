@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
+var fs = require('fs');
 var passport = require('passport');
 var moment = require('moment');
 
@@ -77,9 +78,10 @@ app.set('port',3000);
 server.listen(app.get('port'));
 
 /* modules */
-var bekazon = require('./bekazon');
+var _bekazon = require('./bekazon');
+var downloader = require('./downloader');
+//var bekazon = new bekazon();
 /* modules */
-var fs = require('fs');
 
 io.on('connection', function(socket){
 	
@@ -88,6 +90,12 @@ io.on('connection', function(socket){
 });
 /*******************************/
 
+fs.mkdir('data', function(err){
+	console.log('mkdir...');
+	console.log(err);
+});
+
 setInterval(function(){
-	
+	var dl = new downloader();
+	dl.downloadArtist();
 }, 1000 * 60 * 24);
