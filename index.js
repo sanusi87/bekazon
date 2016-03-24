@@ -74,7 +74,7 @@ app.use(function(err, req, res, next) {
 /*******************************/
 var server = http.createServer(app);
 io = require('socket.io')(server);
-app.set('port',80);
+app.set('port',8000);
 server.listen(app.get('port'));
 
 /* modules */
