@@ -1,0 +1,37 @@
+doctype html
+
+html(lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="App")
+	head(ng-controller="HeadController")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		title Voizznet.com Customer Portal
+		link(rel="shortcut icon" href="/assets/img/favicon.png")
+		link(rel="stylesheet" href="/assets/css/default-blue-white.css")
+		link(rel="stylesheet" href="/assets/js/plugins/toaster/toaster.min.css?ver=1.0")
+		link(rel="stylesheet" href="/assets/css/style.css?ver=1.0")
+		block stylesheet
+
+	body(ng-controller="BodyController")
+		div(ng-include src="'/assets/js/app/partials/body.html'" style="height: 100%")
+		toaster-container
+
+		script(type="text/javascript" src="/socket.io/socket.io.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/angular.min.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/angular-route.min.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/plugins/toaster/toaster.min.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/App.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/DashboardController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/HeadController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/BodyController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/ProfileController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/LoginController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/AccountController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/ServiceController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/controller/AddressController.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/directive/Item.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/factory/User.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/factory/Socket.js?ver=1.0")
+		script(type="text/javascript" src="/assets/js/app/factory/Variable.js?ver=1.0")
+		
+		block javascript
