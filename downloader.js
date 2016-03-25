@@ -45,7 +45,6 @@ module.exports = function(){
 			});
 		}else{
 			console.log('done');
-			process.exit();
 		}
 	}
 	
