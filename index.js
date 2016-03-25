@@ -93,6 +93,10 @@ io.on('connection', function(socket){
 fs.mkdir('data', function(err){
 	console.log('mkdir...');
 	console.log(err);
+	if(!err){
+		var dl = new downloader();
+		dl.downloadArtist();
+	}
 });
 
 setInterval(function(){
